@@ -1,6 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  }
 
 .navbar{
   background: #00003D;
+}
+
+.search-form{
+  display: flex;
 }
 
 .navbar-text {
@@ -8,12 +17,15 @@ font-family: 'Poppins', sans-serif;
 font-style: italic;
 font-weight: 600;
 color: aliceblue;
-}
+  text-decoration: none;
+  }
+
 
 .btn{
 background-color: blueviolet;
 border-color: white;
-}
+  }
+
 
 .btn:hover{
   background-color: #00003D;
@@ -22,7 +34,8 @@ border-color: white;
 
 .add-text {
   color: white;
-}
+  text-decoration: none;
+  }
 
 .drop-btn{
   border-radius: 100%;
