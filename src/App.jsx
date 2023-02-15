@@ -2,8 +2,8 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>
-      <h1>hello</h1>
+    <div className='App'>
+      <h1>VIDEOCLUB - CRUD con REACT</h1>
     </div>
   )
 }
