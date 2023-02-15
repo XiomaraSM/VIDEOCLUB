@@ -1,5 +1,5 @@
 import React from 'react'
-import IndividualMovie from '../../IndividualMovie'
+import IndividualMovie from '../individualmovie/IndividualMovie'
 import './moviesList.css'
 
 const MoviesList = () => {

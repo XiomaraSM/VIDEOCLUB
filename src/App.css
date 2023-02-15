@@ -1,0 +1,34 @@
+
+.navbar{
+  background: #00003D;
+}
+
+.navbar-text {
+font-family: 'Poppins', sans-serif;
+font-style: italic;
+font-weight: 600;
+color: aliceblue;
+}
+
+.btn{
+background-color: blueviolet;
+border-color: white;
+}
+
+.btn:hover{
+  background-color: #00003D;
+  border-color: white;
+}
+
+.add-text {
+  color: white;
+}
+
+.drop-btn{
+  border-radius: 100%;
+  border-color: transparent;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 800;
+  font-size: 30px;
+}
