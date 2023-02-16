@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  }
+
+  .tituloAdd{
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    color: green;
+  }
+
+  label {
+    color: purple;
+  }
+
+  input {
+    border-color: #00003D;
+  }
+
+
+  .btn-success {
+    background-color: #00003D;
+  }
+
+  .btn-personal{
+    background-color: aqua;
+  }
+
+

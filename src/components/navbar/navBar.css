@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-.navbar {
+.navbar{
   background-color: #00003d;
 }
 
@@ -18,7 +18,29 @@
   font-size: 2.5rem;
 }
 
-.form{
-  
+.videoText:hover {
+  color: purple;
 }
 
+.searchF {
+  /*form search*/
+  border-color: purple;
+  background-color: transparent;
+}
+
+.searchF::placeholder {
+  font-family: "Open Sans";
+  font-style: italic;
+  color: white;
+}
+
+.btnSearch {
+  border-color: purple;
+  color: white;
+}
+
+.btnSearch:hover {
+  background-color: white;
+  color: black;
+  font-family: "Open Sans";
+}

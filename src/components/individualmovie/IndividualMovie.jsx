@@ -23,38 +23,38 @@ const Peliculas = () => {
       directorname: "Alfred Hitchcock",
     },
     {
-      id: "1",
-      title: "Vertigo",
-      year: "1958",
-      time: "28",
+      id: "2",
+      title: "The Godfather",
+      year: "1972",
+      time: "175",
       lang: "English",
-      gender: "Mystery",
-      country: "UK",
-      reviewerName: "Righty Sock",
-      rev_stars: "8.40",
-      ratings: 263575,
-      dt_rel: "24/08/1958",
-      actorname: "James Stewart",
+      gender: "Crime",
+      country: "USA",
+      reviewerName: "Movie Critic",
+      rev_stars: "9.20",
+      ratings: 876034,
+      dt_rel: "24/03/1972",
+      actorname: "Marlon Brando",
       aGender: "M",
-      role: "John Scottie Ferguson",
-      directorname: "Alfred Hitchcock",
+      role: "Don Vito Corleone",
+      directorname: "Francis Ford Coppola",
     },
     {
-      id: "1",
-      title: "Vertigo",
-      year: "1958",
-      time: "28",
+      id: "3",
+      title: "Inception",
+      year: "2010",
+      time: "148",
       lang: "English",
-      gender: "Mystery",
-      country: "UK",
-      reviewerName: "Righty Sock",
-      rev_stars: "8.40",
-      ratings: 263575,
-      dt_rel: "24/08/1958",
-      actorname: "James Stewart",
+      gender: "Action",
+      country: "USA",
+      reviewerName: "Cinephile",
+      rev_stars: "8.80",
+      ratings: 1923843,
+      dt_rel: "16/07/2010",
+      actorname: "Leonardo DiCaprio",
       aGender: "M",
-      role: "John Scottie Ferguson",
-      directorname: "Alfred Hitchcock",
+      role: "Cobb",
+      directorname: "Christopher Nolan",
     },
   ];
 
@@ -68,8 +68,8 @@ const Peliculas = () => {
             </td>
             <th>Título</th>
             <th>Año</th>
-            <th className="d-none d-md-table-cell">Duración</th>
-            <th className="d-none d-md-table-cell">Idioma</th>
+            <th>Duración</th>
+            <th>Idioma</th>
             <th className="d-none d-md-table-cell">Género</th>
             <th className="d-none d-md-table-cell">País</th>
             <th className="d-none d-md-table-cell">Reseña</th>
@@ -90,14 +90,13 @@ const Peliculas = () => {
               index //busca la pelicula
             ) => (
               <tr key={index}>
-                //trae la posicion de cualquier pelicula
                 <td>
                   <input type="checkbox" />
                 </td>
                 <td>{pelicula.id}</td>
                 <td>{pelicula.title}</td>
                 <td>{pelicula.year}</td>
-                <td className="d-none d-md-table-cell">{pelicula.time}</td>
+                <td>{pelicula.time}</td>
                 <td className="d-none d-md-table-cell">{pelicula.lang}</td>
                 <td className="d-none d-md-table-cell">{pelicula.gender}</td>
                 <td className="d-none d-md-table-cell">{pelicula.country}</td>
@@ -112,7 +111,9 @@ const Peliculas = () => {
                 <td className="d-none d-md-table-cell">
                   {pelicula.directorname}
                 </td>
-                <Button>+</Button>
+                <td>
+                  <Button>+</Button>
+                </td>
               </tr>
             )
           )}

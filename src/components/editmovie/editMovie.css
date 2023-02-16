@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+.tituloEdit {
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  color: purple;
+}
+
+.btn-group-sm {
+  background-color: purple !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+.btn-group-sm:hover {
+  border-color: black !important;
+  cursor: pointer;
+  background-color: transparent !important;
+  color: black !important;
+}
+.btn-cancel {
+  background-color: blue !important;
+  border-color: transparent !important;
+  color: white !important;
+}
+
+.btn-cancel:hover {
+  border-color: black !important;
+  cursor: pointer;
+  background-color: transparent !important;
+  color: black !important;
+}

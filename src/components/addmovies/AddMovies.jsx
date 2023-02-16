@@ -47,7 +47,9 @@ const AddMovies = () => {
       <table className="table">
         <thead>
           <tr>
-            <th scope="col">Agregar pelicula</th>
+            <th scope="col">
+              <h2 className="tituloAdd">Agregar pelicula</h2>
+          </th>
           </tr>
         </thead>
         <tbody>
@@ -186,10 +188,17 @@ const AddMovies = () => {
               />
             </th>
           </tr>
+          <tr>
+  <th scope="row">
+    <button type="button" className="btn btn-success">
+      Agregar
+    </button>
+    <button type="button" className="btn btn-danger">
+      Cancelar
+    </button>
+  </th>
+</tr>
         </tbody>
-        <button type="button" class="btn btn-success">
-          Success
-        </button>
       </table>
     </div>
   );
