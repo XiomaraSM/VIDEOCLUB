@@ -84,32 +84,38 @@ const Peliculas = () => {
         </thead>
 
         <tbody>
-          {peliculas.map((pelicula, index) => (
-            <tr key={index}>
-              <td>
-                <input type="checkbox" />
-              </td>
-              <td>{pelicula.id}</td>
-              <td>{pelicula.title}</td>
-              <td>{pelicula.year}</td>
-              <td className="d-none d-md-table-cell">{pelicula.time}</td>
-              <td className="d-none d-md-table-cell">{pelicula.lang}</td>
-              <td className="d-none d-md-table-cell">{pelicula.gender}</td>
-              <td className="d-none d-md-table-cell">{pelicula.country}</td>
-              <td className="d-none d-md-table-cell">
-                {pelicula.reviewerName}
-              </td>
-              <td className="d-none d-md-table-cell">{pelicula.rev_stars}</td>
-              <td className="d-none d-md-table-cell">{pelicula.dt_rel}</td>
-              <td className="d-none d-md-table-cell">{pelicula.actorname}</td>
-              <td className="d-none d-md-table-cell">{pelicula.aGender}</td>
-              <td className="d-none d-md-table-cell">{pelicula.role}</td>
-              <td className="d-none d-md-table-cell">
-                {pelicula.directorname}
-              </td>
-              <Button>+</Button>
-            </tr>
-          ))}
+          {peliculas.map(
+            (
+              pelicula,
+              index //busca la pelicula
+            ) => (
+              <tr key={index}>
+                //trae la posicion de cualquier pelicula
+                <td>
+                  <input type="checkbox" />
+                </td>
+                <td>{pelicula.id}</td>
+                <td>{pelicula.title}</td>
+                <td>{pelicula.year}</td>
+                <td className="d-none d-md-table-cell">{pelicula.time}</td>
+                <td className="d-none d-md-table-cell">{pelicula.lang}</td>
+                <td className="d-none d-md-table-cell">{pelicula.gender}</td>
+                <td className="d-none d-md-table-cell">{pelicula.country}</td>
+                <td className="d-none d-md-table-cell">
+                  {pelicula.reviewerName}
+                </td>
+                <td className="d-none d-md-table-cell">{pelicula.rev_stars}</td>
+                <td className="d-none d-md-table-cell">{pelicula.dt_rel}</td>
+                <td className="d-none d-md-table-cell">{pelicula.actorname}</td>
+                <td className="d-none d-md-table-cell">{pelicula.aGender}</td>
+                <td className="d-none d-md-table-cell">{pelicula.role}</td>
+                <td className="d-none d-md-table-cell">
+                  {pelicula.directorname}
+                </td>
+                <Button>+</Button>
+              </tr>
+            )
+          )}
         </tbody>
       </Table>
     </div>
