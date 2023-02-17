@@ -4,6 +4,7 @@ import uniqid from "uniqid";
 import axios from "axios";
 
 const EditMovie = () => {
+
   //hooks
   const [title, setTitle] = useState("");
   const [duration, setDuration] = useState("");
@@ -191,16 +192,15 @@ const EditMovie = () => {
               </th>
             </tr>
             <tr>
-  <th scope="row">
-    <button type="button" className="btn btn-group-sm">
-      Editar
-    </button>
-    <button type="button" className="btn btn-cancel">
-      Cancelar
-    </button>
-  </th>
-</tr>
-
+              <th scope="row">
+                <button type="button" className="btn btn-group-sm">
+                  Editar
+                </button>
+                <button type="button" className="btn btn-cancel">
+                  Cancelar
+                </button>
+              </th>
+            </tr>
           </tbody>
         </table>
       </div>
