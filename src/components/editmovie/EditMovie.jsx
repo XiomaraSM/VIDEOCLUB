@@ -5,25 +5,24 @@ import axios from "axios";
 
 const EditMovie = () => {
 
-  //hooks
-  const [title, setTitle] = useState("");
-  const [duration, setDuration] = useState("");
-  const [genre, setGenre] = useState("");
-  const [country, setCountry] = useState("");
-  const [language, setLanguage] = useState("");
-  const [year, setYear] = useState("");
-  const [critic, setCritic] = useState("");
-  const [stars, setStars] = useState("");
-  const [quantityReviews, setQuantityReviews] = useState("");
-  const [actorActress, setActorActress] = useState("");
-  const [sex, setSex] = useState("");
-  const [character, setCharacter] = useState("");
-  const [director, setDirector] = useState("");
-  const [releaseDate, setReleaseDate] = useState("");
+  const [title, setTitle] = useState(props.title);
+  const [duration, setDuration] = useState(props.duration);
+  const [genre, setGenre] = useState(props.genre);
+  const [country, setCountry] = useState(props.country);
+  const [language, setLanguage] = useState(props.language);
+  const [year, setYear] = useState(props.year);
+  const [critic, setCritic] = useState(props.critic);
+  const [stars, setStars] = useState(props.stars);
+  const [quantityReviews, setQuantityReviews] = useState(props.quantityReviews);
+  const [actorActress, setActorActress] = useState(props.actorActress);
+  const [sex, setSex] = useState(props.sex);
+  const [character, setCharacter] = useState(props.character);
+  const [director, setDirector] = useState(props.director);
+  const [releaseDate, setReleaseDate] = useState(props.releaseDate);
 
-  const handleAddMovie = () => {
+  const handleEditMovie = () => {
     //agregar esto a la base de datos
-    const movie = {
+  const movie = {
       //agregar uniqid para crear id automatico
       title,
       duration,
@@ -41,6 +40,15 @@ const EditMovie = () => {
       releaseDate,
     };
     //agregar console log, api y res /modificar package.json
+    axios
+      .put(`your-api-url/${props.id}`, movie)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
   };
 
   return (

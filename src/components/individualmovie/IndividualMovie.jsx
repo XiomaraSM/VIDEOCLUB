@@ -3,6 +3,8 @@ import "./individualMovie.css";
 import Table from "react-bootstrap/Table";
 import Button from "react-bootstrap/Button";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { Link } from "react-router-dom";
+import DeleteMovie from "../deletemovie/DeleteMovie";
 
 const Peliculas = () => {
   const [dataMovie, setDataMovie] = useState([]); //conectando backend a frontend
@@ -21,6 +23,19 @@ const Peliculas = () => {
   }, []);
   console.log(dataMovie);
   const peliculas = [];
+
+  //trayendo el boton de eliminar
+
+  const handleDelete = async (id) => {
+    const response = await fetch(
+      `https://backendcrudmanu.onrender.com/movie/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+    const data = await response.json();
+    setDataMovie(data); // fin del button delete
+  };
 
   return (
     <div className="container">
@@ -85,18 +100,23 @@ const Peliculas = () => {
                   </button>
                   <ul class="dropdown-menu">
                     <li>
-                      <button>
+                      <button className="d-none d-md-table-cell">
                         <i class="bi bi-eye"></i>
                       </button>
                     </li>
                     <li>
-                      <button id="edit-button">
-                        <i class="bi bi-pencil-square"></i>
-                      </button>
+                      <Link to="/editarpelicula">
+                        <i className="bi bi-pencil-square"></i>
+                      </Link>
                     </li>
                     <li>
                       <button>
-                        <i class="bi bi-trash"></i>
+                        <i class="bi bi-trash">
+                          <DeleteMovie
+                            id={pelicula.id}
+                            onDelete={handleDelete}
+                          />
+                        </i>
                       </button>
                     </li>
                   </ul>

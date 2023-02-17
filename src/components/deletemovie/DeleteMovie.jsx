@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './deleteMovie.css'
 
-const DeleteMovie = () => {
+const DeleteMovie = ({ id, onDelete }) => {
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const handleDelete = () => {
+    if (window.confirm('¿Está seguro que desea borrar la película?')) {
+      setIsDeleting(true);
+      onDelete(id);
+    }
+  };
+
   return (
-    <div>
-      <h2>Eliminar Pelicula</h2>
-    </div>
-  )
-}
+    <button onClick={handleDelete} disabled={isDeleting}>
+      {isDeleting ? 'Borrando...' : 'Borrar'}
+    </button>
+  );
+};
 
 export default DeleteMovie
+
